@@ -1,4 +1,4 @@
-- name: variables preference 
+- name: understand the variables preference 
   hosts: local 
   connection: local 
   vars:
