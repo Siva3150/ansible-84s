@@ -18,7 +18,7 @@
       name: ansible
       duration: 10HR
       trainer: sivakumar
-    ansible.builtindebug: 
+    ansible.builtin.debug: 
      msg: "Course Info: {{ course | dic2items }}"
 
   - name: convert list to map 
