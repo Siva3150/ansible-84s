@@ -11,3 +11,22 @@
   - name: To split the names 
     ansible.builtin.debug: 
      msg: "Hello, {{ persons | split(',') }}"
+
+  - name: convert map into list 
+    vars: 
+     course:
+      name: ansible
+      duration: 10HR
+      trainer: sivakumar
+    ansible.builtindebug: 
+     msg: "Course Info: {{ couse | dic2items }}"
+
+  - name: convert list to map 
+    vars:
+      course:
+      - {'key': 'name', 'value': 'ansible'}
+      - {'key': 'duration', 'value': '10HR'}
+      - {'key': 'trainer', 'value': 'sivakumar'}
+    ansible.builtin.debug: 
+     msg: "Course Info: {{ course | items2dict }}"
+    
