@@ -19,8 +19,8 @@
      image_id: ami-09c813fb71547fc4f
      tags: 
       Name: "{{ item }}"
-  loop: "{{ instances }}"
-  register: ec2_output 
+    loop: "{{ instances }}"
+    register: ec2_output 
    
   - name: print ec2_output 
     ansible.builtin.debug: 
