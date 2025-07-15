@@ -10,7 +10,7 @@
     sg_id: sg-00074df5f97ffa960
     zone: sivadevops.fun 
   tasks: 
-  - name: craete ec2 instances 
+  - name: create ec2 instances 
     amazon.aws.ec2_instance:
       name: "{{ item }}"
       vpc_subnet_id: "{{ subnet_id }}"
