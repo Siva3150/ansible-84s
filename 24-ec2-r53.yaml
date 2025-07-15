@@ -12,13 +12,13 @@
   tasks: 
   - name: craete ec2 instances 
     amazon.aws.ec2_instance:
-     name: "{{ item }}"
-     vpc-subnet_id: "{{ subnet_id }}"
-     instance_type: t3.micro 
-     security_group: "{{ sg_id }}"
-     image_id: ami-09c813fb71547fc4f
-     tags: 
-      Name: "{{ item }}"
+      name: "{{ item }}"
+      vpc-subnet_id: "{{ subnet_id }}"
+      instance_type: t3.micro 
+      security_group: "{{ sg_id }}"
+      image_id: ami-09c813fb71547fc4f
+      tags: 
+       Name: "{{ item }}"
     loop: "{{ instances }}"
     register: ec2_output 
    
