@@ -1,4 +1,6 @@
 plugin: amazon.aws.aws_ec2
+#plugin: aws_ec2
+
 
 regions:
 - us-east-1
@@ -8,7 +10,7 @@ keyed_groups:
   separator: "-"
 filters:
   tag:Name: frontend 
-  instance_state_name: running 
+  instance-state-name: running 
 hostnames:
   # You can also specify a list in order of precedence for hostname variables.
   - private-ip-address
